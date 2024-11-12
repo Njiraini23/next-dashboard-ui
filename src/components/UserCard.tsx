@@ -1,6 +1,6 @@
 const UserCard =({type}:{type:string})=>{
     return (
-        <div className="">UserCard</div>
+        <div className="rounded-2xl odd:bg">UserCard</div>
     )
 }
 

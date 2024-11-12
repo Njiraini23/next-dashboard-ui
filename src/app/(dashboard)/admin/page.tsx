@@ -6,7 +6,7 @@ const AdminPage = () => {
             {/* LEFT SIDE */}
             <div className="w-full lg:w-2/3">
             {/*User Cards*/}
-            <div className="">
+            <div className="flex gap-4 justify-between">
                 <UserCard type="student"/>
                 <UserCard type="teacher"/>
                 <UserCard type="parent"/>
@@ -14,7 +14,7 @@ const AdminPage = () => {
             </div>
             </div>
             {/*Right*/}
-            <div className="w-full lg:w-1/3">R</div>
+            <div className="w-full lg:w-1/3"></div>
         </div>
     )
 }
