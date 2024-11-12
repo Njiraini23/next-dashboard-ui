@@ -1,3 +1,5 @@
+"use client"
+import Image from 'next/image';
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -45,37 +47,33 @@ const data = [
   },
 ];
 
-const style = {
-  top: '50%',
-  right: 0,
-  transform: 'translate(0, -50%)',
-  lineHeight: '24px',
-};
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/p/sandbox/simple-radial-bar-chart-gnwjjg';
-
-  render() {
+const CountChart = ()=>{
     return (
-      <ResponsiveContainer width="100%" height="100%">
-        <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={10} data={data}>
-          <RadialBar
-            minAngle={15}
-            label={{ position: 'insideStart', fill: '#fff' }}
-            background
-            clockWise
-            dataKey="uv"
+        <div className="">
+            {/* TITLE */}
+            <div className='flex justify-between items-center'>
+                <h1>Students</h1>
+                <Image src="moreDark.png" alt='' width={20} height={20}/>
+            </div>
+            {/* CHART */}
+            <div className=''>
+            <ResponsiveContainer width="100%" height="100%">
+             <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={10} data={data}>
+             <RadialBar
+             minAngle={15}
+                label={{ position: 'insideStart', fill: '#fff' }}
+                background
+                clockWise
+                dataKey="uv"
           />
           <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
         </RadialBarChart>
       </ResponsiveContainer>
-    );
-  }
-}
-
-const CountChart = ()=>{
-    return (
-        <div className="">CountChart</div>
+            </div>
+            {/* BOTTOM */}
+            <div className=''></div>
+        </div>
     )
 }
 
