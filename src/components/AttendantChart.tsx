@@ -54,7 +54,11 @@ const AttendanceChart =()=>{
           />
           <YAxis axisLine={false} tick={{fill:"#d1d5db"}} tickLine={false} />
           <Tooltip contentStyle={{borderRadius:"10px", borderColor:"lightgray"}} />
-          <Legend align='left' verticalAlign='top' wrapperStyle={{paddingTop:"20px", paddingBottom:"40px" }} />
+          <Legend 
+          align='left' 
+          verticalAlign='top' 
+          wrapperStyle={{paddingTop:"20px", paddingBottom:"40px" }}
+          />
           <Bar dataKey="present" 
           fill="#FAE27C" 
           legendType='circle'
