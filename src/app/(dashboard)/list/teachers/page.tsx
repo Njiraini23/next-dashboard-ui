@@ -1,6 +1,7 @@
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
+import { role, teachersData } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -76,7 +77,12 @@ const TeacherListPage = ()=> {
                         <Image src="/view.png" alt="" width={16} height={16} />
                     </button>
                     </Link>
-                </div>
+                    {role === "admin" && (
+                        <button className="w-7 h-7 flex items-center justify-center rounded-full bg-lamaPurple">
+                        <Image src="/view.png" alt="" width={16} height={16} />
+                    </button>
+                    )}
+                    </div>
             </td>
         </tr>
     }
@@ -102,7 +108,7 @@ const TeacherListPage = ()=> {
             </div>
         </div>
         {/* LIST */}
-        <Table columns={columns} />
+        <Table columns={columns} renderRow={renderRow} data={teachersData} />
         {/* PAGINATION */}
         <Pagination />
         </div>
