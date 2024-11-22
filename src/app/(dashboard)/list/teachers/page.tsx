@@ -55,8 +55,8 @@ const columns = [
 
 const TeacherListPage = ()=> {
 
-    const RenderRow = (item:Teacher)=>{
-        <tr>
+    const renderRow = (item:Teacher)=> (
+        <tr key={item.id}>
             <td>
                 <Image src={item.photo} alt="" width={40} height={40} className="md:hidden xl:block w-10 h-10 rounded-full object-cover"
                 />
@@ -85,7 +85,7 @@ const TeacherListPage = ()=> {
                     </div>
             </td>
         </tr>
-    }
+    );
 
     return (
         <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
