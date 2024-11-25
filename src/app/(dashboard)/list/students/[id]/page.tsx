@@ -14,7 +14,7 @@ const SingleStudentPage = ()=>{
         {/* USER INFO CARD */}
         <div className="bg-lamaSky py-6 px-4 rounded-md flex-1 flex gap-4">
             <div className="w-1/3">
-            <Image src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1304&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            <Image src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200" 
             alt="" 
             width={144} 
             height={144} 
