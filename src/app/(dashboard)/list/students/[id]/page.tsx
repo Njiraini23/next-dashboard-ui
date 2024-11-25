@@ -14,7 +14,7 @@ const SingleStudentPage = ()=>{
         {/* USER INFO CARD */}
         <div className="bg-lamaSky py-6 px-4 rounded-md flex-1 flex gap-4">
             <div className="w-1/3">
-            <Image src="https://www.freepik.com/free-psd/portrait-young-woman-with-afro-dreadlocks-hairstyle_38086170.htm#fromView=keyword&page=1&position=6" 
+            <Image src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1304&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             alt="" 
             width={144} 
             height={144} 
@@ -69,7 +69,7 @@ const SingleStudentPage = ()=>{
              <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] 2xl:w-[48%]">
                 <Image src="/singleLesson.png" alt="" width={24} height={24} className="w-6 h-6"/>
                 <div className="">
-                    <h1 className="text-xl font-semibold ">6</h1>
+                    <h1 className="text-xl font-semibold ">16</h1>
                     <span className="text-sm text-gray-500">Lessons</span>
                 </div>
             </div>
@@ -77,7 +77,7 @@ const SingleStudentPage = ()=>{
              <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] 2xl:w-[48%]">
                 <Image src="/singleClass.png" alt="" width={24} height={24} className="w-6 h-6"/>
                 <div className="">
-                    <h1 className="text-xl font-semibold ">6</h1>
+                    <h1 className="text-xl font-semibold ">6B</h1>
                     <span className="text-sm text-gray-500">Classes</span>
                 </div>
             </div>
@@ -94,11 +94,11 @@ const SingleStudentPage = ()=>{
         <div className="bg-white p-4 rounded-md">
             <h1 className="text-xl font-semibold">Shortcuts</h1>
             <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
-                <Link className="p-3 rounded-md bg-lamaSkyLight" href="/"> Teacher&apos;s Classes</Link>
-                <Link className="p-3 rounded-md bg-lamaPurpleLight" href="/"> Teacher&apos;s Students</Link>
-                <Link className="p-3 rounded-md bg-lamaYellowLight" href="/"> Teacher&apos;s Lessons</Link>
-                <Link className="p-3 rounded-md bg-pink-50" href="/"> Teacher&apos;s Exams</Link>
-                <Link className="p-3 rounded-md bg-lamaSkyLight" href="/"> Teacher&apos;s Assignments</Link>
+                <Link className="p-3 rounded-md bg-lamaSkyLight" href="/"> Student&apos;s Lessons</Link>
+                <Link className="p-3 rounded-md bg-lamaPurpleLight" href="/"> Student&apos;s Teachers</Link>
+                <Link className="p-3 rounded-md bg-lamaYellowLight" href="/"> Student&apos;s Exams</Link>
+                <Link className="p-3 rounded-md bg-pink-50" href="/"> Student&apos;s Assignments</Link>
+                <Link className="p-3 rounded-md bg-lamaSkyLight" href="/"> Student&apos;s Results</Link>
             </div>
         </div>
         <Performance />
