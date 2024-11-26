@@ -51,11 +51,7 @@ const ParentListPage = ()=> {
                     <h3 className="font-semibold" >{item.name} </h3>
                     <p className="text-xs text-gray-500"> {item?.email} </p>
                 </div>
-            </td>
-            <td className="hidden md:table-cell">{item.students.join(",")}</td>
-            <td className="hidden md:table-cell">{item.phone}</td>
-            <td className="hidden md:table-cell">{item.address}</td>
-            <td>
+   
                 <div className="flex items-center gap-2">
                 {role === "admin" && (
                         <>
