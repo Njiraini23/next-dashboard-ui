@@ -35,8 +35,8 @@ const FormModel = ({
      : "bg-lamaPurple";
     return (
     <>
-        <button className={`${size} flex items-center justify-center rounded-full`} >
-            <Image src={`/${type}.png`} alt="" width={16} height={16} />
+        <button className={`${size} flex items-center justify-center rounded-full ${bgColor}`} >
+            <Image src={`/${type}.png`} alt="" width={16} height={16 } />
         </button>
         </>
     );
