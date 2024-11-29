@@ -45,7 +45,7 @@ const FormModel = ({
             <button className="bg-red-700 text-white py-2 px-4 rounded-md border-none w-max self-center">Delete</button>
         </form> 
     ): (
-         <TeacherForm type="create" />
+         <TeacherForm type="update" data={data} />
     );
     }
 

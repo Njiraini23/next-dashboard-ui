@@ -1,5 +1,6 @@
 import Announcements from "@/components/Announcements";
 import BigCalendar from "@/components/BigCalendar";
+import FormModel from "@/components/FormModels";
 import Performance from "@/components/Performance";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,7 +23,27 @@ const SingleTeacherPage = ()=>{
             />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
+            <div className="flex items-center gap-4">
             <h1 className="text-xl font-semibold">Joe Rogan</h1>
+            <FormModel 
+            table="teacher" 
+            type="update" 
+            data={{
+                id: 1,
+                username: "ngururo",
+                email: "one@gmail.com",
+                password: "password",
+                firstName: "Joe",
+                lastName: "Fat",
+                phone: "+23423467",
+                addres: "20 Kagio",
+                bloodType: "A+",
+                dateOfBirth:"200-01-01",
+                sex: "male",
+                img: "https://images.pexels.com/photos/2182978/pexels=photo=2182978.jpeg?autocompress&cs=tinyrgb&w=1200",
+                }} 
+                />
+             </div>
             <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
