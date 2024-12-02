@@ -12,9 +12,15 @@ const TeacherForm = dynamic(()=>import("./forms/TeacherForm"),{
 const StudentForm = dynamic(()=>import("./forms/StudentForm"),{
     loading: ()=>  <h1>Loading...</h1>
   });
+  const ParentForm = dynamic(()=> import("./forms/ParentForm"));
+  const ClassForm = dynamic(()=> import("./forms/ClassForm"));
+  const SubjectForm = dynamic(()=> import("./forms/SubjectForm"));
+  const LessonForm = dynamic(()=> import("./forms/LessonForm"));
+  const ExamForm = dynamic(()=> import("./forms/ExamForm"));
+  const AssignmentForm = dynamic(()=> import("./forms/AssignmentForm"));
   
 const forms: {
-    [key:string]:(type:"create" | "update", data?: any)=>JSX.Element;
+    [key:string]:(type:"create" | "update", data?: any) =>JSX.Element;
 
 } = {
    teacher: (type, data) => <TeacherForm type={type} data={data} />,
