@@ -17,7 +17,11 @@ const StudentForm = dynamic(()=>import("./forms/StudentForm"),{
   const SubjectForm = dynamic(()=> import("./forms/SubjectForm"));
   const LessonForm = dynamic(()=> import("./forms/LessonForm"));
   const ExamForm = dynamic(()=> import("./forms/ExamForm"));
+  const AttendanceForm = dynamic(()=> import("./forms/AttendanceForm"));
+  const EventForm = dynamic(()=> import("./forms/EventForm"));
   const AssignmentForm = dynamic(()=> import("./forms/AssignmentForm"));
+  const AnnouncementForm = dynamic(()=> import("./forms/AnnouncementForm"));
+  const ResultForm = dynamic(()=> import("./forms/ResultForm"));
   
 const forms: {
     [key:string]:(type:"create" | "update", data?: any) =>JSX.Element;
@@ -25,6 +29,16 @@ const forms: {
 } = {
    teacher: (type, data) => <TeacherForm type={type} data={data} />,
    student: (type, data) => <StudentForm type={type} data={data} />,
+   parent: (type, data) => <ParentForm type={type} data={data} />,
+   class: (type, data) => <ClassForm type={type} data={data} />,
+   subject: (type, data) => <SubjectForm type={type} data={data} />,
+   lesson: (type, data) => <LessonForm type={type} data={data} />,
+   exam: (type, data) => <ExamForm type={type} data={data} />,
+   attendance: (type, data) => <AttendanceForm type={type} data={data} />,
+   event: (type, data) => <EventForm type={type} data={data} />,
+   announcement: (type, data) => <AnnouncementForm type={type} data={data} />,
+   Assignment: (type, data) => <AssignmentForm type={type} data={data} />,
+   result: (type, data) => <ResultForm type={type} data={data} />
  };
 
 const FormModel = ({
