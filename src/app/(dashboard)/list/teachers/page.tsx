@@ -7,6 +7,9 @@ import prisma from "@/lib/prisma";
 import { Class, Subject, Teacher } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { URLSearchParams } from "url";
+import { string } from "zod";
 
 type TeacherList = Teacher & { subjects:Subject[] } & {classes: Class[] };
 
@@ -94,14 +97,21 @@ const renderRow = (item:TeacherList)=> (
     </tr>
 );
 
-const TeacherListPage = async ()=> {
+const TeacherListPage = async ({
+    searchParams,
+}: {
+    searchParams: { [key: string]:string} | undefined;
+}) => {
+    console.log(searchParams)
+
     const data = await prisma.teacher.findMany({
         include: {
             subjects: true,
             classes: true
         },
+        take:10
     }); 
-    console.log(data)
+    // console.log(data)
 
    return (
         <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
