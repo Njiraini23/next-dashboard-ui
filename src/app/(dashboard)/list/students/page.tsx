@@ -48,7 +48,7 @@ const renderRow = (item:StudentList)=> (
     className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight">
         <td className="flex items-center gap-4 p-4">
             <Image 
-            src={item.photo} 
+            src={item.img || "/noAvatar.png"} 
             alt="" 
             width={40} 
             height={40} 
@@ -56,11 +56,11 @@ const renderRow = (item:StudentList)=> (
             />
             <div className="flex flex-col">
                 <h3 className="font-semibold" >{item.name} </h3>
-                <p className="text-xs text-gray-500"> {item.class} </p>
+                <p className="text-xs text-gray-500"> {item.class.name} </p>
             </div>
         </td>
-        <td className="hidden md:table-cell">{item.studentId}</td>
-        <td className="hidden md:table-cell">{item.grade}</td>
+        <td className="hidden md:table-cell">{item.username}</td>
+        <td className="hidden md:table-cell">{item.class.name[0]}</td>
         <td className="hidden md:table-cell">{item.phone}</td>
         <td className="hidden md:table-cell">{item.address}</td>
         <td>
