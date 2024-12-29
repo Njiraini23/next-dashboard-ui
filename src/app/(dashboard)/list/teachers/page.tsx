@@ -120,6 +120,9 @@ const TeacherListPage = async ({
 
                 },
              };
+             break;
+             case "search":
+                query.name = {contains:value, mode: 'insensitive'}
             }
          } 
         }
@@ -129,7 +132,7 @@ const TeacherListPage = async ({
         where: query,
         include: {
             subjects: true,
-            classes: true
+            classes: true,
         },
         take:ITEM_PER_PAGE,
         skip: ITEM_PER_PAGE * (p - 1),
