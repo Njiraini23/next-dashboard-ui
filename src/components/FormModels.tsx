@@ -57,7 +57,7 @@ const FormModel = ({
     |"attendance"
     |"exam"
     |"event"
-    |"assignment"
+    |"assignment"  
     |"result"
     |"announcement";
     type:"create" | "update" | "delete";
