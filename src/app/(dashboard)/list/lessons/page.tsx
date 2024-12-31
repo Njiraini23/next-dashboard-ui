@@ -80,7 +80,8 @@ const LessonListPage = async ({
             case "search":
                 query.OR = [
                     { subject: { name : { contains: value, mode: 'insensitive'}}},
-                ]
+                    { teacher: { name : { contains: value, mode: 'insensitive'}}},
+                ];
                 break;
             }
          } 
@@ -100,8 +101,6 @@ const LessonListPage = async ({
     }),
     prisma.lesson.count({ where:query }),
 ]);
-
-    
 
     return (
         <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
