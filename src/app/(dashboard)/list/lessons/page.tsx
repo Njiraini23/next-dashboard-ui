@@ -78,7 +78,9 @@ const LessonListPage = async ({
                 query.teacherId = value;
                 break;
             case "search":
-                query.name = {contains:value, mode: 'insensitive'};
+                query.OR = [
+                    { subject: { name : { contains: value, mode: 'insensitive'}}},
+                ]
                 break;
             }
          } 
@@ -96,7 +98,7 @@ const LessonListPage = async ({
         take:ITEM_PER_PAGE,
         skip: ITEM_PER_PAGE * (p - 1),
     }),
-    prisma.class.count({where:query}),
+    prisma.lesson.count({ where:query }),
 ]);
 
     
