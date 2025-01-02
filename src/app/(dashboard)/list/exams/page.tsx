@@ -46,8 +46,8 @@ const renderRow = (item:ExamList)=> (
         <td className="flex items-center gap-4 p-4">{item.lesson.subject.name}</td>
         <td>{item.lesson.class.name}</td>
         <td className="hidden md:table-cell">{item.lesson.teacher.name + " " + item.lesson.teacher.surname}</td>
-        <td className="hidden md:table-cell">{new Intl.DateTimeFormat("en-US").format(item.startTime)}
-
+        <td className="hidden md:table-cell">
+            {new Intl.DateTimeFormat("en-US").format(item.startTime)}
         </td>
         <td>
             <div className="flex items-center gap-2">
@@ -62,7 +62,7 @@ const renderRow = (item:ExamList)=> (
     </tr>
 );
 
-const ExamListPage =async ({
+const ExamListPage = async ({
     searchParams,
 }: {
     searchParams: { [key: string]:string | undefined };
@@ -115,7 +115,7 @@ const ExamListPage =async ({
         take:ITEM_PER_PAGE,
         skip: ITEM_PER_PAGE * (p - 1),
     }),
-    prisma.lesson.count({ where:query }),
+    prisma.exam.count({ where:query }),
 ]);
 
 
@@ -140,9 +140,9 @@ const ExamListPage =async ({
             </div>
         </div>
         {/* LIST */}
-        <Table columns={columns} renderRow={renderRow} data={examsData} />
-        {/* PAGINATION */}
-        <Pagination />
+        <Table columns={columns} renderRow={renderRow} data={data} />
+        {/* PAGINATION  */}
+        <Pagination page={p} count={count} />
         </div>
     )
 }
