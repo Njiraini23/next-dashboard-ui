@@ -51,7 +51,8 @@ const renderRow = (item:ExamList)=> (
         </td>
         <td>
             <div className="flex items-center gap-2">
-            {role === "admin" && (
+            {role === "admin" ||
+                role === "teacher" && (
                     <> 
                     <FormModel table="exam" type="update" data={item} />
                     <FormModel table="exam" type="delete" id={item.id} />
@@ -92,9 +93,11 @@ const ExamListPage = async ({
                 query.lesson = {
                     subject: {
                         name: {contains: value, mode: 'insensitive'}
-                    }
-                }
+                    },
+                };
                 break;
+                default: 
+                  break;
             }
          } 
         }
